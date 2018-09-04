@@ -1,0 +1,13 @@
+{
+    "respCode": "000000",
+    "msg": "success",
+    "data": {
+        "incomeAmount": 32323.323,
+        "incomeCurrency": "BTC",
+        "incomeBalanceAmount": 0.32323,
+        "incomeDate": null,
+        "produceProfitDate": null,
+        "gainProfitDate": null,
+        "status": 1
+    }
+}

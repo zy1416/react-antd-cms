@@ -1,0 +1,14 @@
+.dashboard{
+
+}
+
+.dashboard h2{
+    font-size: 34px;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 400;
+}
+
+.simpleTable{
+    width: 100%;
+    overflow-x: auto;
+}
