@@ -1,16 +1,15 @@
 import React from 'react'
 import {HashRouter, Route, Switch} from 'react-router-dom'
-import Home from './page/Home'
 import Login from './page/Login'
-import './page/common.css'
+import './style/index.css'
+import BasicLayout from './layouts/BasicLayout'
 
 export default () => {
     return (
         <HashRouter>
             <Switch>
-                <Route path="/" exact component={Login}/>
-                <Route path="/Home" component={Home}/>
                 <Route path="/Login" component={Login}/>
+                <Route path="/" render={props => <BasicLayout {...props} />}/>
             </Switch>
         </HashRouter>
     )

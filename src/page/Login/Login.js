@@ -1,13 +1,13 @@
 import React from 'react'
 import {Form, Icon, Input, Button, Checkbox} from 'antd'
-import Fetch from '../../utils/fetch'
+import request from '../../utils/request'
 
 const FormItem = Form.Item;
 
 class LoginForm extends React.Component {
 
     login = ({userName, password}) => {
-        Fetch('/login', {userName, password}).then((response) => {
+        request('/login', {userName, password}).then((response) => {
             this.props.logIn(userName)
             this.props.history.push({pathname: '/Home'})
         }).catch(response => {
@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
             <div className="react-login-container">
                 <div className="react-login">
                     <Form onSubmit={this.handleSubmit} className="react-login-form">
-                        <h1>登录系统</h1>
+                        <h1>登录</h1>
                         <FormItem>
                             {getFieldDecorator('userName', {
                                 rules: [{required: true, message: '请输入用户名!'}],

@@ -1,7 +1,8 @@
 .notfound {
     text-align: center;
-    margin: 100px auto;
+    margin: 0 auto;
     color: #efefef;
     font-size: 200px;
+    padding-top: 80px;
     text-shadow: 5px 5px 5px #afafaf;
 }
