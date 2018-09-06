@@ -9,6 +9,7 @@ function fromJSONFile(filename) {
 }
 const proxy = {
     'POST /login': fromJSONFile('login'),
-    'POST /menu': fromJSONFile('menu')
+    'POST /menu': fromJSONFile('menu'),
+    'POST /fakeSubmitForm': fromJSONFile('fakeSubmitForm')
 };
 module.exports = proxy;

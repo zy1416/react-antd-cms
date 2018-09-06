@@ -1,4 +1,4 @@
-import {LOG_IN, LOG_OUT} from '../constants/LoginTypes'
+import {LOG_IN, LOG_OUT} from '../constants/ActionTypes'
 
 const initState = {
     userName: null

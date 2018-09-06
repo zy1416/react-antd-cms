@@ -1,0 +1,43 @@
+.basic-form-optional{
+    color: rgba(0,0,0,.45);
+    font-style: normal
+}
+
+.step-form {
+    margin: 40px auto 0;
+    max-width: 500px;
+}
+
+.step-form-desc{
+    color: rgba(0,0,0,.45);
+    padding: 0 56px;
+}
+
+.step-form-desc h3{
+    color: rgba(0,0,0,.45);
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0 0 12px;
+}
+
+.step-form-desc h4{
+    color: rgba(0,0,0,.45);
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 4px;
+}
+
+.step-form-desc p{
+    line-height: 22px;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.step-form-text{
+    margin-bottom: 24px;
+}
+
+.step-form-text .ant-form-item-label,
+.step-form-text .ant-form-item-control{
+    line-height: 22px;
+}

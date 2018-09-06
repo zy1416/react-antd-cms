@@ -1,0 +1,39 @@
+.basic-header {
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+    padding: 0 12px 0 0;
+    position: relative;
+    background: #ffffff;
+    height: 64px;
+}
+
+.basic-header-trigger {
+    cursor: pointer;
+    font-size: 20px;
+    height: 64px;
+    line-height: 64px;
+    padding: 22px 24px;
+    transition: all .3s, padding 0s;
+}
+
+.basic-header-right {
+    float: right;
+    height: 100%;
+}
+
+.basic-header-right-action {
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    padding: 0 12px;
+    transition: all .3s;
+}
+
+.basic-header-right-action i {
+    color: rgba(0, 0, 0, .65);
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.basic-header-right-action:hover {
+    background: #e6f7ff;
+}

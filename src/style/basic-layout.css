@@ -1,0 +1,21 @@
+.basic-layout {
+    min-height: 100vh;
+}
+
+.basic-layout-sider {
+    box-shadow: 2px 0 6px rgba(0,21,41,.35);
+}
+
+.basic-layout-sider-logo{
+    background: #002140;
+    height: 64px;
+    line-height: 64px;
+    overflow: hidden;
+    padding-left: 44px;
+    position: relative;
+    transition: all .3s;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
