@@ -26,8 +26,13 @@ export default class BasicRouter extends React.Component {
             <Route
                 key={r.path}
                 path={r.path}
-                component={props => this.requireLogin(<Component {...props}/>)}
-            />
+                component={props => this.requireLogin(<Component {...props}/>)}>
+                {
+                    r.children && r.children.map(rItem => {
+                        return this.route(rItem)
+                    })
+                }
+            </Route>
         )
     }
 
@@ -42,6 +47,7 @@ export default class BasicRouter extends React.Component {
         return (
             <Switch>
                 {this.handleRouters(routers)}
+                <Redirect exact from="/" to="/dashboard/analysis"/>
             </Switch>
         )
     }

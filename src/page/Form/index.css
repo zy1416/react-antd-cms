@@ -41,3 +41,35 @@
 .step-form-text .ant-form-item-control{
     line-height: 22px;
 }
+
+.step-form-result {
+    margin: 0 auto;
+    max-width: 560px;
+    padding: 30px 0 15px;
+}
+
+
+.step-form-information{
+    line-height: 22px;
+}
+
+.step-form-information .ant-row:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.step-form-label{
+    color: rgba(0, 0, 0, 0.85);
+    text-align: right;
+    padding-right: 8px;
+}
+
+.step-form-money {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 14px;
+}
+
+.step-form-uppercase {
+    font-size: 12px;
+}

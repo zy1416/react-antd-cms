@@ -27,9 +27,24 @@ export default {
         component: dynamicWrapper(() => import('../page/Form/StepForm'))
     },
     '/form/step-form/info': {
+        name: '分步表单（填写转账信息）',
         component: dynamicWrapper(() => import('../page/Form/StepForm/Step1'))
+    },
+    '/form/step-form/confirm': {
+        name: '分步表单（确认转账信息）',
+        component: dynamicWrapper(() => import('../page/Form/StepForm/Step2'))
+    },
+    '/form/step-form/result': {
+        name: '分步表单（完成）',
+        component: dynamicWrapper(() => import('../page/Form/StepForm/Step3'))
     },
     '/exception/404': {
         component: dynamicWrapper(() => import('../page/Exception/404'))
+    },
+    '/exception/403': {
+        component: dynamicWrapper(() => import('../page/Exception/403'))
+    },
+    '/exception/500': {
+        component: dynamicWrapper(() => import('../page/Exception/500'))
     }
 }

@@ -24,28 +24,33 @@ const formItemLayout = {
     },
 }
 
-class Step1 extends React.Component {
+class Step2 extends React.Component {
+
+    componentWillMount() {
+        const {location, history} = this.props;
+        const {state} = location;
+        if (!state || (state.from && state.from != '/form/step-form/info')) {
+            history.push({pathname: '/form/step-form/info'})
+        }
+    }
 
     render() {
-        const {form, saveOrder, history} = this.props;
+        const {form, history, location} = this.props;
         const {payAccount, receiverName, accountType, receiverAccount, amount} = this.props;
         const {getFieldDecorator, validateFields} = form;
-        let accountTypeValue = {accountType};
 
         const onValidateForm = () => {
             validateFields((err, values) => {
                 if (!err) {
                     let payload = {
-                        ...values,
-                        ...accountTypeValue
+                        ...values
                     }
-                    saveOrder(payload)
-                    history.push({pathname: '/form/step-form/confirm'})
+                    history.push({pathname: '/form/step-form/result',state: {from: location.pathname}})
                 }
             })
         }
         const onPrev = () => {
-
+            history.push({pathname: '/form/step-form/info', state: {from: location.pathname}})
         }
 
         return (
@@ -109,4 +114,4 @@ const mapStateToProps = (state) => ({
     ...state.order
 })
 
-export default withRouter(connect(mapStateToProps, null)(Form.create()(Step1)))
+export default withRouter(connect(mapStateToProps, null)(Form.create()(Step2)))

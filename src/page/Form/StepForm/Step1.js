@@ -7,7 +7,7 @@ import {
     Button,
     Divider
 } from 'antd'
-import {saveOrder} from "../../../redux/actions/order"
+import {saveOrder, resetOrder} from "../../../redux/actions/order"
 import {withRouter} from 'react-router-dom'
 
 import '../index.css'
@@ -26,8 +26,16 @@ const formItemLayout = {
 
 class Step1 extends React.Component {
 
+    componentWillMount() {
+        const {location, resetOrder} = this.props;
+        const {state} = location;
+        if (!state || (state.from && state.from != '/form/step-form/confirm')) {
+            resetOrder();
+        }
+    }
+
     render() {
-        const {form, saveOrder, history} = this.props;
+        const {form, saveOrder, history, location} = this.props;
         const {payAccount, receiverName, accountType, receiverAccount, amount} = this.props;
         const {getFieldDecorator, validateFields} = form;
         let accountTypeValue = {accountType};
@@ -40,7 +48,7 @@ class Step1 extends React.Component {
                         ...accountTypeValue
                     }
                     saveOrder(payload)
-                    history.push({pathname: '/form/step-form/confirm'})
+                    history.push({pathname: '/form/step-form/confirm', state: {from: location.pathname}})
                 }
             })
         }
@@ -134,4 +142,4 @@ const mapStateToProps = (state) => ({
     ...state.order
 })
 
-export default withRouter(connect(mapStateToProps, {saveOrder})(Form.create()(Step1)))
+export default withRouter(connect(mapStateToProps, {saveOrder, resetOrder})(Form.create()(Step1)))

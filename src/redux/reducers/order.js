@@ -1,4 +1,4 @@
-import {SAVE_ORDER} from "../constants/ActionTypes"
+import {SAVE_ORDER,RESET_ORDER} from "../constants/ActionTypes"
 
 const orderState = {
     payAccount: null,
@@ -14,6 +14,10 @@ export default function order(state = orderState, action) {
             return {
                 ...orderState,
                 ...action.payload
+            }
+        case RESET_ORDER:
+            return{
+                ...orderState
             }
         default:
             return state
